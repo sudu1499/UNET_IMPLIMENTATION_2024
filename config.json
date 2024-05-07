@@ -1,0 +1,5 @@
+{
+    "working_directory":"E:\\UNet implication 24",
+    "images_directory":"E:\\UNet implication 24\\dataset\\images",
+    "annotaion_directory":"E:\\UNet implication 24\\dataset\\annotations"
+}
