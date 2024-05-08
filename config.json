@@ -1,5 +1,8 @@
 {
     "working_directory":"E:\\UNet implication 24",
     "images_directory":"E:\\UNet implication 24\\dataset\\images",
-    "annotaion_directory":"E:\\UNet implication 24\\dataset\\annotations"
+    "annotaion_directory":"E:\\UNet implication 24\\dataset\\annotations",
+    "data_x":"E:\\UNet implication 24\\x_128.pkl",
+    "data_y":"E:\\UNet implication 24\\y_128_mask_rgb.pkl"
+    
 }

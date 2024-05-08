@@ -1,8 +1,8 @@
 from keras import layers,Model
 
 def design_model():
-    l1=layers.Input(shape=(128,128,3)) ######## 128*128*3
-    l1=layers.Conv2D(filters=32,activation='leaky_relu',kernel_size=(3,3),padding='same')(l1)
+    linp=layers.Input(shape=(128,128,3)) ######## 128*128*3
+    l1=layers.Conv2D(filters=32,activation='leaky_relu',kernel_size=(3,3),padding='same',name="LAAYER1")(linp)
     l1=layers.Conv2D(filters=64,activation='leaky_relu',kernel_size=(3,3),padding='same')(l1)
     l1=layers.BatchNormalization(epsilon=.001)(l1)
     l1=layers.Dropout(rate=.3)(l1)
@@ -50,9 +50,9 @@ def design_model():
 
     l7=layers.Conv2DTranspose(filters=16,strides=(2,2),kernel_size=(3,3),padding='same',activation='leaky_relu')(l7) ## 128 128 16
     l7=layers.Conv2D(filters=8,kernel_size=(3,3),padding='same',activation='leaky_relu')(l7) 
-    l7=layers.Conv2D(filters=1,kernel_size=(8,8),padding='same',activation='leaky_relu')(l7)
+    l7=layers.Conv2D(filters=3,kernel_size=(8,8),padding='same',activation='sigmoid')(l7)
     # 128 128 1
-    model=Model(l1,l7)
+    model=Model(linp,l7)
 
     model.summary()
     return model

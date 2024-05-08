@@ -116,6 +116,7 @@ def save_data(x,y):
     pickle.dump(y,open("y_128_mask_rgb.pkl","wb"))
 
 # x,y=pickle.load(open("x_128.pkl",'rb')),pickle.load(open("y_128_mask_rgb.pkl",'rb'))
+def main_call():
 
-x,y=trimap_to_img(config)
-save_data(x,y)
+    x,y=trimap_to_img(config)
+    save_data(x,y)
